@@ -1,0 +1,22 @@
+[russianfedora-free-pre-rawhide]
+name=Russian Fedora for Fedora $releasever Rawhide - Free
+#baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/development/$releasever/$basearch/os/
+mirrorlist=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/.mirrorlist-free-fedora-pre-rawhide
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+
+[russianfedora-free-pre-rawhide-debuginfo]
+name=Russian Fedora for Fedora $releasever Rawhide - Free - Debug
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/development/$releasever/$basearch/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+
+[russianfedora-free-pre-rawhide-source]
+name=Russian Fedora for Fedora $releasever Rawhide - Free - Source
+baseurl=http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/development/$releasever/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-russianfedora-free-fedora
+

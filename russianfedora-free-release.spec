@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        14
+Version:        13
 Release:        1
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
@@ -15,13 +15,16 @@ Source1:        russianfedora-%{repo}.repo
 Source2:        russianfedora-%{repo}-updates.repo
 Source3:        russianfedora-%{repo}-updates-testing.repo
 Source4:        russianfedora-%{repo}-rawhide.repo
+Source5:        russianfedora-%{repo}-pre-rawhide.repo
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
-Requires:       system-release >= 14
+Requires:       system-release >= 13
 
 # If apt is around, it needs to be a version with repomd support
 Conflicts:      apt < 0.5.15lorg3
+
+Obsoletes:	tigro-release
 
 %if %{repo} == "nonfree"
 Requires:       russianfedora-free-release >= %{version}
@@ -77,7 +80,7 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
 
 # Yum .repo files
-%{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} \
+%{__install} -p -m644 %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 
@@ -98,9 +101,6 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Thu Oct 14 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 14-1
-- stable release
-
 * Wed May 19 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 13-1
 - enable stable repos disable unstable
 
