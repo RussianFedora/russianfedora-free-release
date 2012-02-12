@@ -4,7 +4,7 @@
 
 Name:           russianfedora-%{repo}-release
 Version:        6
-Release:        1.R
+Release:        2.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
 Group:          System Environment/Base
@@ -18,6 +18,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
 Requires:       system-release >= %{version}
+Requires:	puias-release >= %{version}
 
 # If apt is around, it needs to be a version with repomd support
 Conflicts:      apt < 0.5.15lorg3
@@ -97,5 +98,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Feb 12 2012 Arkady L. Shane <ashejn@yandex-team.ru> - 6-2.R
+- added R: puias-release
+
 * Tue Oct 11 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 6-1.R
 - initial build for EL
