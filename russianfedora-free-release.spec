@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/pki/rpm-gpg/*
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 %attr(0644,root,root) %{_datadir}/app-info/xmls/*
-%{_datadir}/app-info/icons/fedora-%{version}/*.png
+%{_datadir}/app-info/icons/russianfedora-%{version}-free/*.png
 
 
 %changelog
