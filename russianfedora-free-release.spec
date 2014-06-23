@@ -85,7 +85,7 @@ install -d -m755 \
     $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 # AppStream metadata
-DESTDIR=%{buildroot} appstream-util install %{SOURCE1} %{SOURCE2}
+DESTDIR=%{buildroot} appstream-util install %{SOURCE5} %{SOURCE6}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
