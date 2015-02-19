@@ -3,7 +3,7 @@
 #define repo fixes
 
 Name:           russianfedora-%{repo}-release
-Version:        21
+Version:        23
 Release:        0.1.R
 Summary:        Russian Fedora (%{repo}) Repository Configuration
 
